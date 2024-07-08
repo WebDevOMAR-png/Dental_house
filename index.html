@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر مستلزمات طب الأسنان</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>متجر مستلزمات طب الأسنان</h1>
+        <div class="contact-info">
+            <p>الهاتف: 01221641212</p>
+        </div>
+        <div class="cart">
+            <button onclick="toggleCart()">عربة التسوق (<span id="cart-count">0</span>)</button>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>مرحبًا بكم في متجرنا</h2>
+            <p>أفضل المنتجات للعناية بالأسنان.</p>
+        </section>
+        <section id="products">
+            <h2>منتجاتنا</h2>
+            <input type="text" id="search-input" onkeyup="searchProducts()" placeholder="ابحث عن المنتجات...">
+            <div id="product-list" class="product-list">
+                <div class="product">
+                    <h3>راب مصري</h3>
+                    <p>وصف المنتج</p>
+                    <p>السعر: 50 جنيه</p>
+                    <button onclick="addToCart('راب مصري', 50)">أضف إلى السلة</button>
+                </div>
+                <div class="product">
+                    <h3>فرش بوند</h3>
+                    <p>وصف المنتج</p>
+                    <p>السعر: 45 جنيه</p>
+                    <button onclick="addToCart('فرش بوند', 45)">أضف إلى السلة</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="cart" class="cart-content">
+        <h2>عربة التسوق</h2>
+        <ul id="cart-items"></ul>
+        <p>المجموع: <span id="total-price">0</span> جنيه</p>
+        <button onclick="clearCart()">إفراغ السلة</button>
+        <h3>طرق الدفع</h3>
+        <div class="payment-method">
+            <h4>Vodafone Cash</h4>
+            <img src="vodafone-cash-qr.png" alt="Vodafone Cash QR Code" class="qr-code">
+        </div>
+        <div class="payment-method">
+            <h4>InstaPay</h4>
+            <img src="instapay-qr.png" alt="InstaPay QR Code" class="qr-code">
+        </div>
+    </div>
+    <footer>
+        <section id="contact">
+            <h2>اتصل بنا</h2>
+            <p>البريد الإلكتروني: info@dentalstore.com</p>
+            <p>الهاتف: 01221641212</p>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
